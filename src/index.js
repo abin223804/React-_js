@@ -1,22 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
-function Listitem() {
-  return (
-    <div className="list_item">
-      <hr />
-      <div className="list_title">
-        <h4>My Title One</h4>
-      </div>
-      <div className="list_descr">This is a very big Description</div>
-      <div className="list_label">
-        <span>Label1</span>
-        <span>Labe2</span>
-        <span>Label3</span>
-      </div>
-    </div>
-  );
-}
+import ListItem from './List/ListItem'
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -29,10 +13,10 @@ root.render(
     </div>
     <div className="app_body">
       <div className="app_list">
-      <Listitem/>
-      <Listitem/>
-      <Listitem/>
-      <Listitem/>
+      <ListItem/>
+      <ListItem/>
+      <ListItem/>
+      <ListItem/>
 
       
       
