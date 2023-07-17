@@ -1,4 +1,5 @@
 import React from 'react';
+import Label from './Label';
 
 
 
@@ -7,14 +8,17 @@ function ListItem() {
       <div className="list_item">
         <hr />
         <div className="list_title">
-          <h4>My Title One</h4>
+          <h4>My Title Two</h4>
         </div>
         <div className="list_descr">This is a very big Description</div>
+        
         <div className="list_label">
-          <span>Label1</span>
-          <span>Labe2</span>
-          <span>Label3</span>
-        </div>
+
+           <Label/>
+           <Label/>
+           <Label/>
+
+      </div>
       </div>
     );
   }

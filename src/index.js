@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import ListItem from './List/ListItem'
+import ListItem from './List/ListItem';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
