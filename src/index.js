@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-function listitem() {
+function Listitem() {
   return (
     <div className="list_item">
       <hr />
@@ -29,10 +29,13 @@ root.render(
     </div>
     <div className="app_body">
       <div className="app_list">
-       
-        {listitem()}
-        {listitem()}
-        {listitem()}
+      <Listitem/>
+      <Listitem/>
+      <Listitem/>
+      <Listitem/>
+
+      
+      
         </div>
     </div>
     <div className="app_footer"></div>
