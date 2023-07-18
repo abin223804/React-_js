@@ -1,15 +1,18 @@
- import React from 'react';
+import React from "react";
+
+// function Label() {
+//   return <span>Label1 </span>;
+// }
+
+// class component
 
 
- 
- function Label(){
-    return(
-        
+class Label extends React.component{
+    render(){
+        return <span>Label A </span>;
+    }
+}
 
-        <span>Label1 </span>
-       
-     
-    )
- }
 
- export default Label;
+
+export default Label;
