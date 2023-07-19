@@ -25,7 +25,11 @@ function ListItem(props) {
         
         <div className="list_label">
 
-           <Label isActive={isActive}/>
+           <Label onAction={
+            ()=>{
+              console.log('parent clicked  ');
+            }
+           } isActive={isActive}/>
           
 
       </div>

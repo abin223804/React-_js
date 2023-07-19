@@ -28,7 +28,7 @@ class List extends React.Component {
             <div className="app_list">
           {
             arr.map((obj)=>{
-                return   <ListItem title={obj.title} descr={obj.descr} isActive={obj.isActive} />
+                return   <ListItem   key={obj.title}title={obj.title} descr={obj.descr} isActive={obj.isActive} />
             })
           }
          
