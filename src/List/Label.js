@@ -10,7 +10,12 @@ import './Label.css';
 
 class Label extends React.Component{
     render(){
-        return <span className="list-label-items">Label Abin </span>;
+
+        const props=this.props;
+        const style=props.isActive ? {background:"green"}:{background:"orange"} 
+
+
+        return <span className="list-label-items" style={style}>Label Abin </span>;
     }
 }
 

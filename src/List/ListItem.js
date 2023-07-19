@@ -3,20 +3,22 @@ import Label from './Label';
 
 
 
-function ListItem() {
+function ListItem(props) {
+  console.log(props);
     return (
       <div className="list_item">
         <hr />
         <div className="list_title">
-          <h4>My Title Two</h4>
+          <h4>{props.title}</h4>
         </div>
-        <div className="list_descr">This is a very big Description</div>
+        <div className="list_descr">
+          {props.descr}
+        </div>
         
         <div className="list_label">
 
-           <Label/>
-           <Label/>
-           <Label/>
+           <Label isActive={props.isActive}/>
+          
 
       </div>
       </div>
