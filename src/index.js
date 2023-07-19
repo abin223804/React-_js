@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import ListItem from './List/ListItem';
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 
 
@@ -20,6 +21,7 @@ root.render(
       
         </div>
     </div>
-    <div className="app_footer"></div>
+    <Footer/>
+    
   </div>
 );
