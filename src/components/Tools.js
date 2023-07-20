@@ -4,7 +4,8 @@ import './Tools.css';
 class Tools extends React.Component {
     render() {
         const{
-            children
+            children,
+            onAction
         }=this.props;
 
         const onlyChild=React.Children.only(children)
@@ -13,7 +14,7 @@ class Tools extends React.Component {
 
         return <div className='list-Tools'>
             <div className='list-Header'>
-                <select name='status'>
+                <select onChange={onAction} name='status'>
                     <option  value='all'>All</option>
                     <option  value='active'>Active</option>
                     <option  value='non-active'>Non Active</option>
