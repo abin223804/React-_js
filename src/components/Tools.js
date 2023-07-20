@@ -5,6 +5,11 @@ class Tools extends React.Component {
         const{
             children
         }=this.props;
+
+        const onlyChild=React.Children.only(children)
+        const count=React.Children.count(onlyChild.props.children);
+
+
         return <div>
             <div className='list-Header'>
                 <select name='status'>
@@ -17,7 +22,8 @@ class Tools extends React.Component {
             </div>
             {children}
             <div className='list-Footer'>
-                Some info here
+                
+                Total {count} Items
 
 </div>
         </div>
