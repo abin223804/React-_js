@@ -5,7 +5,22 @@ class Tools extends React.Component {
         const{
             children
         }=this.props;
-        return children
+        return <div>
+            <div className='list-Header'>
+                <select name='status'>
+                    <option  value='all'>All</option>
+                    <option  value='active'>Active</option>
+                    <option  value='non-active'>Non Active</option>
+
+                </select>
+
+            </div>
+            {children}
+            <div className='list-Footer'>
+                Some info here
+
+</div>
+        </div>
     }
 }
 
