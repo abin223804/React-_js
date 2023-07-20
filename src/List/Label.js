@@ -17,7 +17,7 @@ class Label extends React.Component{
 
         return <span onClick={
             props.onAction
-        } className="list-label-items" style={style}>{props.isActive?'active':'nonActive'} Label Abin </span>;
+        } className="list-label-items" style={style}>{props.isActive?'active':'nonActive'} </span>;
     }
 }
 
