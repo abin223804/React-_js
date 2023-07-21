@@ -21,6 +21,19 @@ let arr = [
 ];
 
 class List extends React.Component {
+
+constructor(props){
+  super(props);
+  this.state = {
+    data:arr
+  }
+
+}
+
+
+
+
+
   onListChange(evt) {
     console.log(evt.target.value);
     const value=evt.target.value;
@@ -37,13 +50,18 @@ class List extends React.Component {
 
     })
     console.log(newList)
-     arr=newList;
+    //  arr=newList;
+this.setState({
+  data: newList
+})
+
+
   }
   render() {
     return (
-      <Tools onAction={this.onListChange}>
+      <Tools onAction={this.onListChange.bind(this)}>
         <div className="app_list">
-          {arr.map((obj) => {
+          {this.state.data.map((obj) => {
             return (
               <ListItem
                 key={obj.title}
