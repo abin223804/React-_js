@@ -34,7 +34,7 @@ constructor(props){
 
 
 
-  onListChange(evt) {
+  onListChange=(evt)=> {
     console.log(evt.target.value);
     const value=evt.target.value;
     const newList=arr.filter((item)=>{
@@ -59,7 +59,7 @@ this.setState({
   }
   render() {
     return (
-      <Tools onAction={this.onListChange.bind(this)}>
+      <Tools onAction={this.onListChange}>
         <div className="app_list">
           {this.state.data.map((obj) => {
             return (
