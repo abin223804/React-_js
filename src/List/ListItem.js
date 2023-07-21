@@ -1,5 +1,6 @@
 import React from 'react';
 import Label from './Label';
+import './ListItem.css';
 
 
 
@@ -9,7 +10,8 @@ function ListItem(props) {
   const{
     title,
     descr,
-    isActive
+    isActive,
+    onDelete
   }=props
   
 
@@ -18,6 +20,7 @@ function ListItem(props) {
         <hr />
         <div className="list_title">
           <h4>{title}</h4>
+          <label onClick={onDelete}>Delete</label>
         </div>
         <div className="list_descr">
           {descr}

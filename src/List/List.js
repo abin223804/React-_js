@@ -38,25 +38,7 @@ constructor(props){
   onListChange=(evt)=> {
     console.log(evt.target.value);
     const value=evt.target.value;
-    // const newList=arr.filter((item)=>{
-    //   if(value==='all'){
-    //     return true;
-    //   }if(value==='active'){
-    //     return item.isActive===true;
-    //   }if(value==='non-active'){
-    //     return item.isActive===false;
-    //   }
-    //   return false;
-      
-
-    // })
-    // console.log(newList)
-    //  arr=newList;
-// this.setState({
-//   data: newList
-// },()=>{
-//   console.log('After setstate');
-// })
+   
 
 this.setState({
   activeState:value
@@ -64,6 +46,15 @@ this.setState({
 
 
   }
+handleDelete=()=>{
+  console.log('Delete');
+
+}
+
+
+
+
+
   render() {
 
     const{
@@ -96,6 +87,7 @@ this.setState({
                 title={obj.title}
                 descr={obj.descr}
                 isActive={obj.isActive}
+                onDelete={this.handleDelete}
               />
             );
           })}
