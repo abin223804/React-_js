@@ -2,7 +2,7 @@ import React from "react";
 import Tools from "../components/Tools";
 import ListItem from "./ListItem";
 
-const arr = [
+let arr = [
   {
     title: "appointment for july",
     descr: "The  patiant is resheduled to augest",
@@ -21,8 +21,23 @@ const arr = [
 ];
 
 class List extends React.Component {
-  onListChange() {
-    console.log("Here");
+  onListChange(evt) {
+    console.log(evt.target.value);
+    const value=evt.target.value;
+    const newList=arr.filter((item)=>{
+      if(value==='all'){
+        return true;
+      }if(value==='active'){
+        return item.isActive===true;
+      }if(value==='non-active'){
+        return item.isActive===false;
+      }
+      return false;
+      
+
+    })
+    console.log(newList)
+     arr=newList;
   }
   render() {
     return (
