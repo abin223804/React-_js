@@ -25,7 +25,8 @@ class List extends React.Component {
 constructor(props){
   super(props);
   this.state = {
-    data:arr
+    data:arr,
+    activeState:'all'
   }
 
 }
@@ -37,33 +38,58 @@ constructor(props){
   onListChange=(evt)=> {
     console.log(evt.target.value);
     const value=evt.target.value;
-    const newList=arr.filter((item)=>{
-      if(value==='all'){
+    // const newList=arr.filter((item)=>{
+    //   if(value==='all'){
+    //     return true;
+    //   }if(value==='active'){
+    //     return item.isActive===true;
+    //   }if(value==='non-active'){
+    //     return item.isActive===false;
+    //   }
+    //   return false;
+      
+
+    // })
+    // console.log(newList)
+    //  arr=newList;
+// this.setState({
+//   data: newList
+// },()=>{
+//   console.log('After setstate');
+// })
+
+this.setState({
+  activeState:value
+})
+
+
+  }
+  render() {
+
+    const{
+      data,
+      activeState
+    }=this.state
+
+
+    const newList=data.filter((item)=>{
+      if(activeState==='all'){
         return true;
-      }if(value==='active'){
+      }if(activeState==='active'){
         return item.isActive===true;
-      }if(value==='non-active'){
+      }if(activeState==='non-active'){
         return item.isActive===false;
       }
       return false;
       
 
     })
-    console.log(newList)
-    //  arr=newList;
-this.setState({
-  data: newList
-},()=>{
-  console.log('After setstate');
-})
 
-
-  }
-  render() {
+    
     return (
       <Tools onAction={this.onListChange}>
         <div className="app_list">
-          {this.state.data.map((obj) => {
+          {newList.map((obj) => {
             return (
               <ListItem
                 key={obj.title}
