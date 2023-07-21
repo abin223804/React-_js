@@ -53,6 +53,8 @@ constructor(props){
     //  arr=newList;
 this.setState({
   data: newList
+},()=>{
+  console.log('After setstate');
 })
 
 
