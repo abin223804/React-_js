@@ -68,7 +68,7 @@ class List extends React.Component {
     return (
       <Tools onAction={this.onListChange}>
 
-        <SimpleList data={newList} onAction={this,this.handleDelete}/>
+        <SimpleList data={newList} onAction={this.handleDelete}/>
         
       </Tools>
     );
