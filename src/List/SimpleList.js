@@ -5,7 +5,8 @@ function SimpleList(props){
 
 
     const{
-        data
+        data,
+        onAction
     }=props
 
     return(
@@ -18,7 +19,7 @@ function SimpleList(props){
                 descr={obj.descr}
                 isActive={obj.isActive}
                 onDelete={()=>{
-                  this.handleDelete(obj);
+                  onAction(obj);
                 }}
               />
             );
