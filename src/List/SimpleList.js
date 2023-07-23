@@ -1,0 +1,30 @@
+import React from 'react';
+import ListItem from './ListItem';
+
+function SimpleList(props){
+
+
+    const{
+        data
+    }=props
+
+    return(
+        <div className="app_list">
+          {data.map((obj) => {
+            return (
+              <ListItem
+                key={obj.title}
+                title={obj.title}
+                descr={obj.descr}
+                isActive={obj.isActive}
+                onDelete={()=>{
+                  this.handleDelete(obj);
+                }}
+              />
+            );
+          })}
+        </div>
+    )
+}
+
+export default SimpleList;

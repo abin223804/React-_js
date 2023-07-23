@@ -1,7 +1,7 @@
 import React from "react";
 import Tools from "../components/Tools";
 import ListItem from "./ListItem";
-
+import SimpleList from "./SimpleList";
 let arr = [
   {
     id: 1,
@@ -45,7 +45,7 @@ class List extends React.Component {
     const newList=this.state.data.filter((element)=>element.id!==item.id);
 
     this.setState({
-      data:newList
+      data:newList,
     })
   };
 
@@ -67,21 +67,9 @@ class List extends React.Component {
 
     return (
       <Tools onAction={this.onListChange}>
-        <div className="app_list">
-          {newList.map((obj) => {
-            return (
-              <ListItem
-                key={obj.title}
-                title={obj.title}
-                descr={obj.descr}
-                isActive={obj.isActive}
-                onDelete={()=>{
-                  this.handleDelete(obj);
-                }}
-              />
-            );
-          })}
-        </div>
+
+        <SimpleList data={newList} onAction={this,this.handleDelete}/>
+        
       </Tools>
     );
   }
